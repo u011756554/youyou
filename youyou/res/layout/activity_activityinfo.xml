@@ -1,0 +1,313 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no4_bg">
+
+    <include
+        android:id="@+id/title" 
+        layout="@layout/title"/>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    
+		    <RelativeLayout
+		        android:id="@+id/rl_activityinfo_img"
+		        android:layout_width="match_parent"
+		        android:layout_height="150dp">
+		        
+		        <ImageView
+		            android:id="@+id/iv_activityinfo_img"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:background="@drawable/logo"
+		            android:scaleType="fitXY"/>
+		        
+		        <RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="30dp"
+		            android:layout_alignParentBottom="true"
+		            android:background="@drawable/bg_gray">
+		            
+		            <TextView
+		                android:id="@+id/tv_activityinfo_info"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerInParent="true"
+		                android:text="哆啦A梦：伴我随行"
+		                android:textSize="@dimen/textsize_no1"
+		                android:textColor="@android:color/white"/>
+		            
+		        </RelativeLayout>    
+		        
+		    </RelativeLayout>  
+		    
+		    <RelativeLayout
+		        android:id="@+id/rl_activityinfo_injoy"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/rl_activityinfo_img"
+		        android:layout_marginTop="@dimen/size_no2"
+		        android:layout_marginLeft="@dimen/size_no2"
+		        android:layout_marginRight="@dimen/size_no2">
+		        
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:text="活动详情"
+		            android:textSize="@dimen/textsize_no5"
+		            android:textColor="@android:color/black"/>
+		        
+				<Button
+				    android:id="@+id/btn_activityinfo_injoy"
+				    android:layout_width="wrap_content"
+				    android:layout_height="30dp"
+				    android:text="我要报名"
+				    android:layout_alignParentRight="true"
+				    android:textColor="@android:color/white"
+				    android:textSize="@dimen/textsize_no3"
+				    android:background="@color/no2_btn"
+				    android:paddingLeft="1dp"
+				    android:paddingRight="1dp"
+				    android:paddingTop="1dp"
+				    android:paddingBottom="1dp"/>
+		            
+		    </RelativeLayout>
+		    
+		    <TextView
+		        android:id="@+id/tv_activityinfo_divider1"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_below="@id/rl_activityinfo_injoy"
+		        android:layout_marginTop="@dimen/size_no2"
+		        android:background="#cccccc"/>
+		    
+		    <TextView
+		        android:id="@+id/tv_activityinfo_content"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/tv_activityinfo_divider1"
+		        android:layout_margin="@dimen/size_no2"
+		        android:text="最近，网上很流行一个词：全栈(Full Stack)工程师，也可以叫全端工程师，无论是前端知识，还是后端架构你都要了解。甚至有些调皮的程序员这样理解全栈工程师：全栈工程师=屌丝战斗机=系统+网络+研发+dba+架构+安全=没女朋友、拿一份工资做三份事情的典型、每个站长都是一个全栈工程师，每个站群的站长都是超级全栈工程师。"
+		        android:textSize="@dimen/textsize_no6"
+		        android:textColor="#999999"/>
+		
+		    <LinearLayout
+		        android:id="@+id/ic_activityinfo_divider2"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/tv_activityinfo_content"
+		        android:orientation="vertical">
+				
+			    <include
+			        layout="@layout/divider"/>        
+		        
+		    </LinearLayout>    
+		    
+		    <LinearLayout
+		        android:id="@+id/ll_activityinfo_customer"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/ic_activityinfo_divider2"
+		        android:layout_margin="@dimen/size_no2"
+		        android:orientation="vertical">
+				
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="商家信息"
+		            android:textSize="@dimen/textsize_no5"
+		            android:textColor="@android:color/black"/>
+		        
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="1px"
+		            android:background="#d9d9d9"
+		            android:layout_marginTop="@dimen/size_no2"/>
+		        
+		        <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal">
+		            
+		            <LinearLayout
+		                android:layout_width="0dp"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="4"
+		                android:layout_gravity="center_vertical"
+		                android:orientation="vertical">
+		                
+				        <TextView
+				            android:id="@+id/tv_activityinfo_name"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:text="哆啦A梦：伴我通行"
+				            android:textColor="@android:color/black"
+				            android:textSize="@dimen/textsize_no3"
+				            android:layout_marginTop="@dimen/size_no2"/> 
+				            
+				        <TextView
+				            android:id="@+id/tv_activityinfo_address"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:text="成都市青羊区青龙街家乐福"
+				            android:textColor="#999999"
+				            android:textSize="@dimen/textsize_no3"
+				            android:layout_marginTop="@dimen/size_no2"
+				            android:layout_marginBottom="@dimen/size_no2"/> 				        		            
+				            
+		            </LinearLayout>
+		            
+		            <TextView
+		                android:layout_width="1dp"
+		                android:layout_height="30dp"
+		                android:background="#cccccc"
+		                android:layout_gravity="center_vertical"/>
+		            
+		            <RelativeLayout
+		                android:id="@+id/rl_activityinfo_call"
+		                android:layout_width="0dp"
+		                android:layout_height="wrap_content"
+		                android:layout_gravity="center_vertical"
+		                android:layout_weight="1">
+				        
+		                <ImageView
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_centerInParent="true"
+		                    android:background="@drawable/call"
+		                    android:layout_margin="@dimen/size_no2"/>
+		                
+		            </RelativeLayout>    
+		        </LinearLayout>    
+		        
+		    </LinearLayout>
+		    
+		    <LinearLayout
+		        android:id="@+id/ic_activityinfo_divider3"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/ll_activityinfo_customer"
+		        android:orientation="vertical">
+				
+			    <include
+			        layout="@layout/divider"/>        
+		        
+		    </LinearLayout> 
+		    
+		    <RelativeLayout
+		        android:id="@+id/rl_activityinfo_mark"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="@dimen/size_no2"
+		        android:layout_below="@id/ic_activityinfo_divider3">
+			    
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:text="多人评论"
+		            android:textSize="@dimen/textsize_no5"
+		            android:textColor="@android:color/black"/>
+		        
+		        <TextView
+		            android:id="@+id/tv_activityinfo_markcount"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:text="0条评论"
+		            android:textColor="#999999"
+		            android:textSize="@dimen/textsize_no3"/>
+		    </RelativeLayout> 
+		    
+		    <TextView
+		        android:id="@+id/tv_activityinfo_divider4"
+		        android:layout_width="match_parent"
+		        android:layout_height="1px"
+		        android:layout_below="@id/rl_activityinfo_mark"
+		        android:background="#d9d9d9"/>
+		    
+		    <com.youyou.app.widget.MyListView
+		        android:id="@+id/lv_activityinfo_mark"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/tv_activityinfo_divider4"
+		        android:layout_margin="@dimen/size_no2"
+		        android:divider="#d9d9d9"
+		        android:dividerHeight="1px"/>
+		    		    
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/lv_activityinfo_mark"
+		        android:paddingBottom="@dimen/size_no2">
+		        
+		        <TextView
+		            android:id="@+id/tv_activityinfo_divider5"
+		            android:layout_width="match_parent"
+		            android:layout_height="1dp"
+		            android:background="#b3b3b3"/>
+		        
+		        <RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="50dp"
+		            android:layout_below="@id/tv_activityinfo_divider5"
+		            android:layout_margin="@dimen/size_no2">
+		            
+		            <Button
+		                android:id="@+id/btn_activityinfo_mark"
+		                android:layout_width="wrap_content"
+		                android:layout_height="match_parent"
+		                android:layout_alignParentRight="true"
+		                android:padding="@dimen/size_no2"
+		                android:layout_centerVertical="true"
+		                android:background="@drawable/bg_mark"
+		                android:text="发表评论"
+		                android:textColor="@android:color/black"
+		                android:textSize="@dimen/textsize_no5"/>
+		            
+		            <RelativeLayout
+		                android:layout_width="match_parent"
+		                android:layout_height="match_parent"
+		                android:layout_toLeftOf="@id/btn_activityinfo_mark"
+		                android:background="@drawable/bg_mark"
+		                android:layout_marginRight="@dimen/size_no2">
+		                
+		                <ImageView
+		                    android:id="@+id/iv_activityinfo_write"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_centerVertical="true"
+		                    android:layout_marginLeft="@dimen/size_no3"
+		                    android:background="@drawable/icon_write"/>
+		                
+		                <EditText
+		                    android:id="@+id/edt_activityinfo_mark"
+		                    android:layout_width="match_parent"
+		                    android:layout_height="wrap_content"
+		                    android:background="@null"
+		                    android:layout_toRightOf="@id/iv_activityinfo_write"
+		                    android:layout_centerVertical="true"
+		                    android:layout_marginLeft="@dimen/size_no2"
+		                    android:layout_marginRight="@dimen/size_no2"
+		                    android:hint="说说你的看法吧"
+		                    android:textSize="@dimen/textsize_no5"
+		                    android:textColorHighlight="#c4c7cc"
+		                    android:textColor="@android:color/black"/>
+		                
+		            </RelativeLayout>   
+		            
+		        </RelativeLayout>    
+		        
+		    </RelativeLayout>    
+		        
+		</RelativeLayout>
+	</ScrollView>   
+</RelativeLayout>

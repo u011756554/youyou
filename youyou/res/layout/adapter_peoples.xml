@@ -1,0 +1,40 @@
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/no4_bg"> 
+
+	<ImageView
+	    android:id="@+id/iv_adapter_peoples"
+	    android:layout_width="@dimen/size_no6"
+	    android:layout_height="@dimen/size_no6"
+	    android:layout_margin="@dimen/size_no2"
+	    android:layout_centerVertical="true"
+	    android:background="@drawable/icon_default_bg"
+	    android:scaleType="fitXY"/> 
+	    
+	<TextView
+	    android:id="@+id/tv_adapter_peoples_state"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:layout_marginRight="@dimen/size_no2"
+	    android:text="正在审核"
+	    android:textColor="@color/no12_gray"
+	    android:textSize="@dimen/textsize_no3"/>
+
+	<TextView
+	    android:id="@+id/tv_adapter_peoples_name"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+	    android:layout_toLeftOf="@id/tv_adapter_peoples_state"
+	    android:layout_toRightOf="@id/iv_adapter_peoples"
+	    android:layout_marginLeft="@dimen/size_no2"
+	    android:layout_marginRight="@dimen/size_no2"
+		android:text="啦啦啦德玛西亚"
+		android:textSize="@dimen/textsize_no5"
+		android:textColor="@android:color/black"/>
+	
+</RelativeLayout>

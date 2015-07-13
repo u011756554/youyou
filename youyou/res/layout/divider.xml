@@ -1,0 +1,19 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_divider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/no3_bg"
+    android:orientation="vertical"> 
+
+	<TextView
+	    android:layout_width="match_parent"
+	    android:layout_height="1px"
+	    android:background="#d9d9d9"/>    
+
+	<TextView
+	    android:layout_width="match_parent"
+	    android:layout_height="1px"
+	    android:layout_marginTop="10dp"
+	    android:background="#d9d9d9"/>	
+</LinearLayout>

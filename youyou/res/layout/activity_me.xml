@@ -1,0 +1,225 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_title"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no3_bg"
+    android:orientation="vertical"> 
+ 
+    <include layout="@layout/title"/>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:background="@color/no2_btn">
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+        
+            <ImageView
+                android:id="@+id/iv_me_head"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/icon_default_bg"/>
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+                
+                <TextView
+                    android:id="@+id/tv_me_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                   	android:text="果果菲儿"
+                    android:textSize="12dp"
+                    android:textColor="#fffefe"/>
+                
+                <ImageView
+                    android:id="@+id/iv_me_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/icon_femal"/>
+                
+            </LinearLayout>    
+            
+        </LinearLayout>    
+    </RelativeLayout>    
+
+    <include layout="@layout/divider"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        
+        <LinearLayout
+            android:id="@+id/ll_duihuanquan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           	android:paddingTop="15dp"
+           	android:paddingBottom="15dp"
+           	android:paddingLeft="25dp"
+           	android:paddingRight="25dp"
+            android:orientation="horizontal">
+        
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_duihuanquan"/>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:text="兑换券"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"/>
+            
+        </LinearLayout>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/icon_divider"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+        
+        <LinearLayout
+            android:id="@+id/ll_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           	android:paddingTop="15dp"
+           	android:paddingBottom="15dp"
+           	android:paddingLeft="25dp"
+           	android:paddingRight="25dp"
+            android:orientation="horizontal">
+        
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_score"/>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:text="积分"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"/>
+            
+        </LinearLayout>        
+    </LinearLayout>
+    
+    <include layout="@layout/divider"/>
+    
+   <LinearLayout
+        android:id="@+id/ll_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+       	android:paddingTop="15dp"
+       	android:paddingBottom="15dp"
+       	android:paddingLeft="25dp"
+       	android:paddingRight="25dp"
+        android:orientation="horizontal">
+    
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/icon_update"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="检查更新"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"/>
+        
+    </LinearLayout>  
+    
+    <include layout="@layout/divider"/>
+    
+   <LinearLayout
+        android:id="@+id/ll_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+       	android:paddingTop="15dp"
+       	android:paddingBottom="15dp"
+       	android:paddingLeft="25dp"
+       	android:paddingRight="25dp"
+        android:orientation="horizontal">
+    
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/icon_set"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="设置"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"/>
+        
+    </LinearLayout>  
+    
+    <include layout="@layout/divider"/>
+    
+   <LinearLayout
+        android:id="@+id/ll_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+       	android:paddingTop="15dp"
+       	android:paddingBottom="15dp"
+       	android:paddingLeft="25dp"
+       	android:paddingRight="25dp"
+        android:orientation="horizontal">
+    
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/icon_me_message"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="消息中心"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"/>
+        
+        <ImageView
+            android:id="@+id/iv_me_msg_redpoint"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/icon_me_redpoint"/>        
+        
+    </LinearLayout>   
+</LinearLayout>

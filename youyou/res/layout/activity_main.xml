@@ -1,0 +1,270 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/no4_bg">
+
+    <!-- 顶部广告布局 -->
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1">
+	    
+	    <ImageView
+	        android:id="@+id/iv_main_gray1"
+	        android:layout_width="match_parent"
+	        android:layout_height="20dp"
+	        android:layout_alignParentBottom="true"
+	        android:background="@color/no8_gray"/>
+	    
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@id/iv_main_gray1">
+	        
+		    <ImageView
+		        android:id="@+id/iv_main_guanggao"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:src="@drawable/guanggao"
+		        android:scaleType="fitXY"/>
+		    
+		    <ImageView
+		        android:layout_width="match_parent"
+		        android:layout_height="30dp"
+		        android:background="@drawable/bg_guanggao"
+		        android:layout_alignParentBottom="true"/>		    	        
+	        
+	    </RelativeLayout>    
+	    
+	</RelativeLayout>
+	
+	<!-- 抢购布局 -->
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1">
+	    
+	    <ImageView
+	        android:id="@+id/iv_main_gray2"
+	        android:layout_width="match_parent"
+	        android:layout_height="20dp"
+	        android:layout_alignParentBottom="true"
+	        android:background="@color/no8_gray"/>
+	    
+	    <RelativeLayout
+	        android:id="@+id/rl_main_qianggou"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginBottom="10dp"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp">
+		    
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:text="精品抢购"
+	            android:textSize="@dimen/textsize_no1"
+	            android:textColor="@android:color/black"/>
+	        
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:background="@drawable/btn_getcode_bg_selector"
+	            android:orientation="horizontal">
+	            
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:padding="5dp"
+	                android:text="距离开始"
+	                android:textSize="@dimen/textsize_no3"
+	                android:textColor="@color/no9_gray"/>
+	            
+	            <TextView
+	                android:layout_width="1px"
+	                android:layout_height="12dp"
+	                android:background="@color/no9_gray"
+	                android:layout_gravity="center_vertical"/>
+	            
+	            <TextView
+	                android:id="@+id/tv_main_hour"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:padding="5dp"
+	                android:text="00"
+	                android:textSize="@dimen/textsize_no3"
+	                android:textColor="@color/no10_orange"/>
+	            
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text=":"
+	                android:textSize="@dimen/textsize_no3"
+	                android:textColor="@color/no9_gray"
+	                android:layout_gravity="center_vertical"/>	   
+	                
+	            <TextView
+	                android:id="@+id/tv_main_minute"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:padding="5dp"
+	                android:text="00"
+	                android:textSize="@dimen/textsize_no3"
+	                android:textColor="@color/no10_orange"/>
+	            
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text=":"
+	                android:textSize="@dimen/textsize_no3"
+	                android:textColor="@color/no9_gray"
+	                android:layout_gravity="center_vertical"/>	
+	                
+	            <TextView
+	                android:id="@+id/tv_main_seconds"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:padding="5dp"
+	                android:text="00"
+	                android:textSize="@dimen/textsize_no3"
+	                android:textColor="@color/no10_orange"/>	            	            	            
+	            
+	        </LinearLayout>    
+	        
+	    </RelativeLayout>
+	    
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_above="@id/iv_main_gray2"
+	        android:layout_below="@id/rl_main_qianggou">
+	        
+	        <ImageView
+	            android:id="@+id/iv_main_qianggou"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:src="@drawable/qianggou"
+	            android:scaleType="fitXY"/>
+	        
+		    <ImageView
+		        android:layout_width="match_parent"
+		        android:layout_height="30dp"
+		        android:background="@drawable/bg_qianggou"
+		        android:layout_alignParentBottom="true"/>		        
+	        
+	    </RelativeLayout>    	    
+	    
+	</RelativeLayout>	
+	
+	<!-- 底部导航布局 -->
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1">
+	    
+	    <LinearLayout
+	        android:id="@+id/ll_main_bottom"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="horizontal">
+		    
+	        <RelativeLayout
+	            android:id="@+id/rl_tab_new"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:background="@drawable/bg_tab_gray">
+	            
+	            <ImageView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:layout_marginTop="10dp"
+	                android:src="@drawable/icon_tab_new"/>
+	        </RelativeLayout> 
+	        
+	        <RelativeLayout
+	            android:id="@+id/rl_tab_delicious"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:background="@drawable/bg_tab_white">
+	            
+	            <ImageView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:layout_marginTop="10dp"
+	                android:src="@drawable/icon_tab_delicious"/>	            
+	            
+	        </RelativeLayout>    
+	        
+	        <RelativeLayout
+	            android:id="@+id/rl_tab_game"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:background="@drawable/bg_tab_gray">
+	            
+	            <ImageView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:layout_marginTop="10dp"
+	                android:src="@drawable/icon_tab_game"/>	            
+	            
+	        </RelativeLayout>    
+	        
+	        <RelativeLayout
+	            android:id="@+id/rl_tab_message"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:background="@drawable/bg_tab_white">
+	            
+	            <ImageView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:layout_marginTop="10dp"
+	                android:src="@drawable/icon_tab_message"/>	            
+	            
+	        </RelativeLayout>    
+	        
+	        <RelativeLayout
+	            android:id="@+id/rl_tab_score"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:background="@drawable/bg_tab_gray">
+	            
+	            <ImageView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:layout_marginTop="10dp"
+	                android:src="@drawable/icon_tab_score"/>	            
+	            
+	        </RelativeLayout>    	        	        	        	        
+	        
+	    </LinearLayout> 
+	    
+	    <ImageView
+	        android:id="@+id/iv_tab_me"
+	        android:layout_width="match_parent"
+	        android:layout_height="60dp"
+	        android:background="@drawable/icon_tab_me"
+	        android:layout_alignParentBottom="true"/>
+	    
+	</RelativeLayout>	
+
+</LinearLayout>

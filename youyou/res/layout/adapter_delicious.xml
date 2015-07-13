@@ -1,0 +1,91 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/no4_bg"
+    android:orientation="horizontal"> 
+
+	<ImageView
+	    android:id="@+id/iv_adapter_delicious"
+	    android:layout_width="@dimen/size_no5"
+	    android:layout_height="@dimen/size_no5"
+	    android:layout_margin="@dimen/size_no2"
+	    android:background="@drawable/logo"
+	    android:scaleType="fitXY"/>    
+
+	<RelativeLayout
+	    android:id="@+id/rl_adapter_delicious"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="@dimen/size_no2">
+	    
+	    <TextView
+	        android:id="@+id/tv_adapter_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="日本寿司"
+	        android:textSize="@dimen/textsize_no2"
+	        android:textColor="@android:color/black"/>
+	    
+	    <LinearLayout
+	        android:id="@+id/ll_delicious_score"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_below="@id/tv_adapter_name"
+	        android:layout_marginTop="@dimen/size_no2">
+	        
+	        <ImageView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/icon_alarm"
+	            android:layout_gravity="center_vertical"/>
+	        
+	        <TextView
+	            android:id="@+id/tv_adapter_delicious_alamcounts"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:text="52"
+	            android:textSize="@dimen/textsize_no5"
+	            android:textColor="@color/no11_gray"/>
+	        
+	        <ImageView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/icon_talk"
+	            android:layout_marginLeft="17dp"
+	            android:layout_gravity="center_vertical"/>
+	        
+	        <TextView
+	            android:id="@+id/tv_adapter_delicious_talkcounts"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:text="1314"
+	            android:textSize="@dimen/textsize_no5"
+	            android:textColor="@color/no11_gray"/>	        
+	        
+	    </LinearLayout>    
+	    
+	    <TextView
+	        android:id="@+id/tv_delicious_divider"
+	        android:layout_width="match_parent"
+	        android:layout_height="1px"
+	        android:layout_below="@id/ll_delicious_score"
+	        android:layout_marginRight="@dimen/size_no2"
+	        android:layout_marginTop="@dimen/size_no2"
+	        android:background="#d9d9d9"/>
+	    
+	    <TextView
+	        android:id="@+id/tv_delicious_content"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/tv_delicious_divider"
+	        android:layout_marginTop="8dp"
+	        android:text="    随着7月份的临近,我们也将迎来一年中最为炎热的季节,但与气温形成了鲜明的对比,每年的7月也正是一年中汽车市场较为冷清的“淡季”。不过虽处淡季,通过我们的梳理来看,本月预计将有多达10款新车正式上市,其中包括沃尔沃全新XC90、雪铁龙新C4毕加索、宝骏560、上海大众新款朗逸、东南DX7、吉利帝豪RS、林肯MKX、江西五十铃mu-X、开瑞杰虎以及全新smart fortwo。究竟这些即将上市的新车能否为当前遇冷的车市带来一丝火热,让我们通过本文一起来了解一下吧。"
+	        android:textSize="11dp"
+	        android:textColor="@color/no11_gray"
+	        android:maxLines="4"/>
+	</RelativeLayout>    	
+</LinearLayout>

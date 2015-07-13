@@ -1,0 +1,14 @@
+<resources>
+    <color name="no1_gray">#663616</color>
+    <color name="no2_btn">#e77a32</color>
+    <color name="no3_bg">#f2f2f2</color>
+    <color name="no4_bg">#ffffff</color>
+    <color name="no5_stroke">#e8e8e8</color>
+    <color name="no6_gray">#b2b2b2</color>
+    <color name="no7_green">#2b8843</color>
+    <color name="no8_gray">#e6e6e6</color>
+    <color name="no9_gray">#666666</color>
+    <color name="no10_orange">#e77a32</color>
+    <color name="no11_gray">#bbbec2</color>
+    <color name="no12_gray">#b3b3b3</color>
+</resources>
