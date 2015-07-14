@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ly_change_sex"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#44000000"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ly_change_sex_child"
+        android:layout_width="320dip"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_change_titlepage_title"
+            android:layout_width="wrap_content"
+            android:layout_height="52dip"
+            android:layout_marginLeft="18dip"
+            android:gravity="center_vertical"
+            android:text="性别"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <RadioGroup
+                android:id="@+id/rg_change_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                
+                <com.youyou.app.widget.RadioButton
+                    android:id="@+id/rb_change_boy"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:text="男"
+                    android:paddingLeft="80dp"
+                    android:textColor="@android:color/black"
+                    android:gravity="fill_vertical"
+                    android:textSize="18sp"
+                    app:radio_checked_color="@color/no2_btn"
+                    app:radio_color="@color/no9_gray" >
+                </com.youyou.app.widget.RadioButton>
+
+                <com.youyou.app.widget.RadioButton
+                    android:id="@+id/rb_change_girl"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="30dp"
+                    android:clickable="true"
+                    android:text="女"
+                    android:paddingLeft="80dp"
+                    android:textColor="@android:color/black"
+                    android:gravity="fill_vertical"
+                    android:textSize="18sp"
+                    app:radio_checked_color="@color/no2_btn"
+                    app:radio_color="@color/no9_gray" />
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

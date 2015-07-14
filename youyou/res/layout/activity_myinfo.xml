@@ -67,5 +67,137 @@
             android:layout_marginRight="20dp"/>
         
     </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        
+        <RelativeLayout
+            android:id="@+id/ll_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           	android:paddingTop="15dp"
+           	android:paddingBottom="15dp"
+           	android:paddingLeft="25dp"
+           	android:paddingRight="25dp">
+        
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="性别"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"/>
+            
+            <TextView
+                android:id="@+id/tv_myinfo_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="男"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"/>            
+            
+        </RelativeLayout>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/icon_divider"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+        
+    </LinearLayout> 
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        
+        <RelativeLayout
+            android:id="@+id/ll_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           	android:paddingTop="15dp"
+           	android:paddingBottom="15dp"
+           	android:paddingLeft="25dp"
+           	android:paddingRight="25dp">
+        
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="地区"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"/>
+            
+            <TextView
+                android:id="@+id/tv_myinfo_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="四川-成都"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"/>            
+            
+        </RelativeLayout>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/icon_divider"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+        
+    </LinearLayout>  
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        
+        <RelativeLayout
+            android:id="@+id/ll_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           	android:paddingTop="15dp"
+           	android:paddingBottom="15dp"
+           	android:paddingLeft="25dp"
+           	android:paddingRight="25dp">
+        
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="生日"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"/>
+            
+            <TextView
+                android:id="@+id/tv_myinfo_birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="1989-06-12"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"/>            
+            
+        </RelativeLayout>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/icon_divider"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+        
+    </LinearLayout>        
 
 </LinearLayout>
