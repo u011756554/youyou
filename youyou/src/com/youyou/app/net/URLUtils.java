@@ -41,5 +41,7 @@ public class URLUtils {
 	public static final String GETGAMES = SERVER+"getGames";
 	
 	public static final String CHECKJOINACTIVITY = SERVER+"checkJoinActivity";
+	
+	public static final String PORTRAIT = SERVER+"portrait";
 }
 

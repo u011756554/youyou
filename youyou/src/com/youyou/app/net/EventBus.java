@@ -1,5 +1,6 @@
 package com.youyou.app.net;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -489,7 +490,24 @@ public class EventBus {
 						Log.i(AppContext.APP_TAG, result);
 						System.out.println("login result:"+result);
 						
-					}				
+					}
+					
+					if (event.getEventCode() == EventCode.HTTP_PORTRAIT) {
+						File file = (File) event.getParamAtIndex(0);
+						
+						HashMap<String, Object> map = new HashMap<String, Object>();
+						map.put("file", file);
+						
+						String result = HttpUtils.doUpload(URLUtils.PORTRAIT, map,true);
+						if (TextUtils.isEmpty(result)) {
+							event.setSuccess(false);
+							event.setFailException(new Exception("网络连失败，请检查网络"));
+							return event;
+						}
+						
+						Log.i(AppContext.APP_TAG, result);
+						System.out.println("login result:"+result);
+					}
 				} catch (Exception e) {
 					event.setFailException(e);
 					event.setSuccess(false);

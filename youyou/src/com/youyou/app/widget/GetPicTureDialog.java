@@ -31,7 +31,7 @@ public class GetPicTureDialog extends Dialog implements android.view.View.OnClic
 			listener.update(MODE_CAMERA);
 			break;
 			
-		case R.id.ly_getpicture:
+		case R.id.ll_photos:
 			dismiss();
 			listener.update(MODE_PICTURE);
 			break;
@@ -47,7 +47,7 @@ public class GetPicTureDialog extends Dialog implements android.view.View.OnClic
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.dialog_getpicture);
 		rlCameraLayout = (RelativeLayout) findViewById(R.id.ly_camera);
-		rlPictureLayout = (RelativeLayout) findViewById(R.id.ly_getpicture);
+		rlPictureLayout = (RelativeLayout) findViewById(R.id.ll_photos);
 		rlCameraLayout.setOnClickListener(this);
 		rlPictureLayout.setOnClickListener(this);
 	}
