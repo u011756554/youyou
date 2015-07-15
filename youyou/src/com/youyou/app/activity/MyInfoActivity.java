@@ -258,7 +258,8 @@ public class MyInfoActivity extends BaseActivity {
 	        c.moveToFirst();
 	        int columnIndex = c.getColumnIndex(filePathColumns[0]);
 	        String picturePath = c.getString(columnIndex);
-	        startPhotoZoom(new File(picturePath));
+	        
+	        startPhotoZoom(Uri.parse(Uri.parse(picturePath).getPath()));
 			break;
 		
 		case CROP_IMAGE:
@@ -286,7 +287,7 @@ public class MyInfoActivity extends BaseActivity {
 				     String caputrePicturePath = PictureUtils.instance().getUriPath();
 				     System.out.println("path:"+caputrePicturePath);
 				     String resultpath = PictureUtils.instance().compressFileToFile(caputrePicturePath);
-				     startPhotoZoom(new File(resultpath));
+				     startPhotoZoom(Uri.parse(Uri.parse(resultpath).getPath()));
 				} catch (Exception e) {
 					// TODO: handle exception
 					showToast("获取头像失败");
@@ -301,7 +302,7 @@ public class MyInfoActivity extends BaseActivity {
 			    	 if (bundle != null) {                 
 			    		 Bitmap  photo = (Bitmap) bundle.get("data");  
 			    		 String path = PictureUtils.instance().compressBitmapToFile(photo);
-			    		 startPhotoZoom(new File(path));
+			    		 startPhotoZoom(Uri.parse(Uri.parse(path).getPath()));
 			    	 }   
 			       }else{
 			    	   System.out.println(uri.toString());
@@ -314,7 +315,7 @@ public class MyInfoActivity extends BaseActivity {
 				       String path = PictureUtils.instance().compressFileToFile(filePath);
 				       System.out.println("最终路径："+path);
 				       cur.close();
-				       startPhotoZoom(new File(path));
+				       startPhotoZoom(Uri.parse(Uri.parse(path).getPath()));
 			       }   
 			}
 			break;
