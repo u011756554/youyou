@@ -8,6 +8,11 @@
  
     <include layout="@layout/title"/>
     
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_title_divider"/>
+        
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="125dp"
@@ -18,14 +23,15 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:orientation="vertical">
-        
-            <ImageView
-                android:id="@+id/iv_me_head"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/icon_default_bg"/>
             
+	        <com.youyou.app.widget.RoundImageView
+	            android:id="@+id/iv_me_head"
+	            style="@style/CircleHeadNoBorder"
+	            android:layout_width="70dip"
+	            android:layout_height="70dip"
+	            android:layout_gravity="center_horizontal"
+	            android:background="@drawable/icon_default_bg" />             
+        
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

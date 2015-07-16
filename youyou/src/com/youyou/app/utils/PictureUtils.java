@@ -264,6 +264,13 @@ public class PictureUtils {
 				AppContext.TAKEPICTURE_PATH + "/" +AppContext.TAKEPICTURE_FILE;
 	}
 	
+	public String getUriPath(String path) {
+		if (!path.startsWith("file:"+File.separator+File.separator)) {
+			path = "file:"+File.separator+File.separator+path;
+		}
+		return path;
+	}
+	
 	private int getOpitons(int count) {
 		int percent = (AppContext.PICTURE_SIZE * 100) / count;
 		if(percent > 5) {

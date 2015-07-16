@@ -43,5 +43,7 @@ public class URLUtils {
 	public static final String CHECKJOINACTIVITY = SERVER+"checkJoinActivity";
 	
 	public static final String PORTRAIT = SERVER+"portrait";
+	
+	public static final String UPDATEUSER = SERVER+"updateUser";
 }
 

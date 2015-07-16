@@ -43,4 +43,6 @@ public class EventCode {
 	
 	public static final int HTTP_PORTRAIT = ++BASECODE;
 	
+	public static final int HTTP_UPDATEUSER = ++BASECODE;
+	
 }

@@ -507,7 +507,47 @@ public class EventBus {
 						
 						Log.i(AppContext.APP_TAG, result);
 						System.out.println("login result:"+result);
+						BaseBean msg = g.fromJson(result, BaseBean.class);
+						event.addReturnParam(msg);
+						if (msg.isSuccess()) {
+							event.setSuccess(true);
+						} else {
+							event.setSuccess(false);
+						}
 					}
+					
+					if (event.getEventCode() == EventCode.HTTP_UPDATEUSER) {
+						String nickName = (String) event.getParamAtIndex(0);
+						String gender = (String) event.getParamAtIndex(0);
+						String birth = (String) event.getParamAtIndex(0);
+						String province = (String) event.getParamAtIndex(0);
+						String city = (String) event.getParamAtIndex(0);
+						
+						
+						HashMap<String, String> map = new HashMap<String, String>();
+						map.put("nickName", nickName);
+						map.put("gender", gender);
+						map.put("birth", birth);
+						map.put("province", province);
+						map.put("city", city);
+						
+						String result = HttpUtils.doPost(URLUtils.UPDATEUSER, map, true);
+						if (TextUtils.isEmpty(result)) {
+							event.setSuccess(false);
+							event.setFailException(new Exception("网络连失败，请检查网络"));
+							return event;
+						}
+						
+						Log.i(AppContext.APP_TAG, result);
+						System.out.println("login result:"+result);
+						BaseBean msg = g.fromJson(result, BaseBean.class);
+						event.addReturnParam(msg);
+						if (msg.isSuccess()) {
+							event.setSuccess(true);
+						} else {
+							event.setSuccess(false);
+						}
+					}					
 				} catch (Exception e) {
 					event.setFailException(e);
 					event.setSuccess(false);

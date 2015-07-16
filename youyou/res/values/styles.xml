@@ -26,6 +26,14 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:backgroundDimEnabled">true</item>
+    </style> 
+    
+    <!-- 无描边头像 -->
+    <style name="CircleHeadNoBorder">
+        <item name="border_color">#0000</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/icon_default_bg</item>
+        <item name="android:background">@drawable/icon_default_bg</item>
     </style>    
 
 </resources>

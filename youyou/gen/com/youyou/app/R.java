@@ -17,6 +17,25 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
+        public static final int border_color=0x7f010003;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int border_width=0x7f010002;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
         public static final int radio_checked_color=0x7f010001;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
@@ -176,77 +195,90 @@ containing a value of this type.
     }
     public static final class drawable {
         public static final int back=0x7f020000;
-        public static final int bg_dialog_selector=0x7f020001;
-        public static final int bg_gray=0x7f020002;
-        public static final int bg_guanggao=0x7f020003;
-        public static final int bg_login=0x7f020004;
-        public static final int bg_mark=0x7f020005;
-        public static final int bg_qianggou=0x7f020006;
-        public static final int bg_tab_gray=0x7f020007;
-        public static final int bg_tab_white=0x7f020008;
-        public static final int bg_title=0x7f020009;
-        public static final int bg_xieyi_selector=0x7f02000a;
-        public static final int btn_bg_selector=0x7f02000b;
-        public static final int btn_getcode_bg_selector=0x7f02000c;
-        public static final int button_enable_text_selector_black=0x7f02000d;
-        public static final int button_enable_text_selector_orange=0x7f02000e;
-        public static final int button_white_selector=0x7f02000f;
-        public static final int call=0x7f020010;
-        public static final int comfirm=0x7f020011;
-        public static final int comfirm_clicked=0x7f020012;
-        public static final int delete=0x7f020013;
-        public static final int edt_line=0x7f020014;
-        public static final int game=0x7f020015;
-        public static final int guanggao=0x7f020016;
-        public static final int ic_launcher=0x7f020017;
-        public static final int icon_alarm=0x7f020018;
-        public static final int icon_cursor=0x7f020019;
-        public static final int icon_default_bg=0x7f02001a;
-        public static final int icon_divider=0x7f02001b;
-        public static final int icon_duihuanquan=0x7f02001c;
-        public static final int icon_femal=0x7f02001d;
-        public static final int icon_me_message=0x7f02001e;
-        public static final int icon_me_redpoint=0x7f02001f;
-        public static final int icon_score=0x7f020020;
-        public static final int icon_set=0x7f020021;
-        public static final int icon_tab_delicious=0x7f020022;
-        public static final int icon_tab_game=0x7f020023;
-        public static final int icon_tab_me=0x7f020024;
-        public static final int icon_tab_message=0x7f020025;
-        public static final int icon_tab_new=0x7f020026;
-        public static final int icon_tab_score=0x7f020027;
-        public static final int icon_talk=0x7f020028;
-        public static final int icon_update=0x7f020029;
-        public static final int icon_write=0x7f02002a;
-        public static final int inputbox=0x7f02002b;
-        public static final int logo=0x7f02002c;
-        public static final int me=0x7f02002d;
-        public static final int message=0x7f02002e;
-        public static final int passwords_icon=0x7f02002f;
-        public static final int peoples=0x7f020030;
-        public static final int product=0x7f020031;
-        public static final int qianggou=0x7f020032;
-        public static final int shape_button_orange_gray=0x7f020033;
-        public static final int shape_button_orange_light=0x7f020034;
-        public static final int shape_button_orange_white=0x7f020035;
-        public static final int userheader_icon=0x7f020036;
-        public static final int wait=0x7f020037;
-        public static final int welcome=0x7f020038;
-        public static final int wheel_bg=0x7f020039;
-        public static final int wheel_val=0x7f02003a;
+        public static final int bg_baojie_gray=0x7f020001;
+        public static final int bg_chexian_color=0x7f020002;
+        public static final int bg_dialog_selector=0x7f020003;
+        public static final int bg_gray=0x7f020004;
+        public static final int bg_guanggao=0x7f020005;
+        public static final int bg_ktv_gray=0x7f020006;
+        public static final int bg_login=0x7f020007;
+        public static final int bg_mark=0x7f020008;
+        public static final int bg_meijia_color=0x7f020009;
+        public static final int bg_meirong_gray=0x7f02000a;
+        public static final int bg_meishi_color=0x7f02000b;
+        public static final int bg_qianggou=0x7f02000c;
+        public static final int bg_tab_gray=0x7f02000d;
+        public static final int bg_tab_white=0x7f02000e;
+        public static final int bg_title=0x7f02000f;
+        public static final int bg_xieyi_selector=0x7f020010;
+        public static final int btn_bg_selector=0x7f020011;
+        public static final int btn_getcode_bg_selector=0x7f020012;
+        public static final int button_enable_text_selector_black=0x7f020013;
+        public static final int button_enable_text_selector_orange=0x7f020014;
+        public static final int button_white_selector=0x7f020015;
+        public static final int call=0x7f020016;
+        public static final int comfirm=0x7f020017;
+        public static final int comfirm_clicked=0x7f020018;
+        public static final int delete=0x7f020019;
+        public static final int edt_line=0x7f02001a;
+        public static final int game=0x7f02001b;
+        public static final int guanggao=0x7f02001c;
+        public static final int ic_launcher=0x7f02001d;
+        public static final int icon_alarm=0x7f02001e;
+        public static final int icon_baojie=0x7f02001f;
+        public static final int icon_chexian=0x7f020020;
+        public static final int icon_cursor=0x7f020021;
+        public static final int icon_default_bg=0x7f020022;
+        public static final int icon_divider=0x7f020023;
+        public static final int icon_duihuanquan=0x7f020024;
+        public static final int icon_femal=0x7f020025;
+        public static final int icon_ktv=0x7f020026;
+        public static final int icon_me_message=0x7f020027;
+        public static final int icon_me_redpoint=0x7f020028;
+        public static final int icon_meijia=0x7f020029;
+        public static final int icon_meirong=0x7f02002a;
+        public static final int icon_meishi=0x7f02002b;
+        public static final int icon_score=0x7f02002c;
+        public static final int icon_set=0x7f02002d;
+        public static final int icon_tab_delicious=0x7f02002e;
+        public static final int icon_tab_game=0x7f02002f;
+        public static final int icon_tab_me=0x7f020030;
+        public static final int icon_tab_message=0x7f020031;
+        public static final int icon_tab_new=0x7f020032;
+        public static final int icon_tab_score=0x7f020033;
+        public static final int icon_talk=0x7f020034;
+        public static final int icon_title_divider=0x7f020035;
+        public static final int icon_update=0x7f020036;
+        public static final int icon_write=0x7f020037;
+        public static final int inputbox=0x7f020038;
+        public static final int logo=0x7f020039;
+        public static final int me=0x7f02003a;
+        public static final int message=0x7f02003b;
+        public static final int passwords_icon=0x7f02003c;
+        public static final int peoples=0x7f02003d;
+        public static final int product=0x7f02003e;
+        public static final int qianggou=0x7f02003f;
+        public static final int shape_button_orange_gray=0x7f020040;
+        public static final int shape_button_orange_light=0x7f020041;
+        public static final int shape_button_orange_white=0x7f020042;
+        public static final int userheader_icon=0x7f020043;
+        public static final int wait=0x7f020044;
+        public static final int welcome=0x7f020045;
+        public static final int wheel_bg=0x7f020046;
+        public static final int wheel_val=0x7f020047;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b00a7;
+        public static final int action_settings=0x7f0b00ad;
         public static final int btn_activityinfo_injoy=0x7f0b0006;
         public static final int btn_activityinfo_mark=0x7f0b0014;
         public static final int btn_backpwd=0x7f0b002f;
         public static final int btn_backpwd_getcode=0x7f0b002b;
         public static final int btn_deliciousdetail_mark=0x7f0b0025;
-        public static final int btn_input_cancel=0x7f0b0089;
-        public static final int btn_input_sure=0x7f0b0088;
+        public static final int btn_input_cancel=0x7f0b008f;
+        public static final int btn_input_sure=0x7f0b008e;
         public static final int btn_login=0x7f0b0039;
-        public static final int btn_myinfo_cancel=0x7f0b009e;
-        public static final int btn_myinfo_sure=0x7f0b009c;
+        public static final int btn_myinfo_cancel=0x7f0b00a4;
+        public static final int btn_myinfo_sure=0x7f0b00a2;
         public static final int btn_register=0x7f0b0066;
         public static final int btn_register_getcode=0x7f0b0060;
         public static final int btn_setpwd=0x7f0b006d;
@@ -266,10 +298,10 @@ containing a value of this type.
         public static final int ic_deliciousdetail_divider2=0x7f0b001f;
         public static final int iv_activityinfo_img=0x7f0b0003;
         public static final int iv_activityinfo_write=0x7f0b0015;
-        public static final int iv_adapter_activity=0x7f0b006f;
-        public static final int iv_adapter_delicious=0x7f0b0075;
-        public static final int iv_adapter_mark=0x7f0b007c;
-        public static final int iv_adapter_peoples=0x7f0b0080;
+        public static final int iv_adapter_activity=0x7f0b0075;
+        public static final int iv_adapter_delicious=0x7f0b007b;
+        public static final int iv_adapter_mark=0x7f0b0082;
+        public static final int iv_adapter_peoples=0x7f0b0086;
         public static final int iv_advertdetail=0x7f0b0017;
         public static final int iv_bootom_delete=0x7f0b0035;
         public static final int iv_bootom_line=0x7f0b0032;
@@ -289,20 +321,20 @@ containing a value of this type.
         public static final int iv_myinfo_head=0x7f0b0053;
         public static final int iv_products=0x7f0b005d;
         public static final int iv_register_xieyi=0x7f0b0067;
-        public static final int iv_right=0x7f0b00a6;
+        public static final int iv_right=0x7f0b00ac;
         public static final int iv_tab_me=0x7f0b0048;
         public static final int ll_activityinfo_customer=0x7f0b000a;
         public static final int ll_address=0x7f0b0058;
         public static final int ll_birthday=0x7f0b005a;
-        public static final int ll_delicious_score=0x7f0b0077;
-        public static final int ll_divider=0x7f0b00a0;
+        public static final int ll_delicious_score=0x7f0b007d;
+        public static final int ll_divider=0x7f0b00a6;
         public static final int ll_duihuanquan=0x7f0b004c;
         public static final int ll_gender=0x7f0b0056;
         public static final int ll_login=0x7f0b0031;
         public static final int ll_main_bottom=0x7f0b0042;
         public static final int ll_message=0x7f0b0050;
         public static final int ll_nickname=0x7f0b0054;
-        public static final int ll_photos=0x7f0b0093;
+        public static final int ll_photos=0x7f0b0099;
         public static final int ll_score=0x7f0b004d;
         public static final int ll_set=0x7f0b004f;
         public static final int ll_update=0x7f0b004e;
@@ -311,46 +343,52 @@ containing a value of this type.
         public static final int lv_deliciousdetail_mark=0x7f0b0023;
         public static final int lv_dilicious=0x7f0b0028;
         public static final int lv_peoples=0x7f0b005c;
-        public static final int ly_camera=0x7f0b0094;
-        public static final int ly_change_sex=0x7f0b008a;
-        public static final int ly_change_sex_child=0x7f0b008b;
-        public static final int ly_getpicture=0x7f0b0090;
-        public static final int ly_getpicture_child=0x7f0b0091;
-        public static final int ly_input_nickname=0x7f0b0083;
-        public static final int ly_input_nickname_child=0x7f0b0084;
-        public static final int ly_myinfo_changebirth=0x7f0b0095;
-        public static final int ly_myinfo_changebirth_child=0x7f0b0096;
-        public static final int met_input_city=0x7f0b0087;
-        public static final int met_input_nickname=0x7f0b009f;
-        public static final int met_input_province=0x7f0b0086;
-        public static final int mrl_myinfo_cancel=0x7f0b009d;
-        public static final int mrl_myinfo_sure=0x7f0b009b;
+        public static final int ly_camera=0x7f0b009a;
+        public static final int ly_change_sex=0x7f0b0090;
+        public static final int ly_change_sex_child=0x7f0b0091;
+        public static final int ly_getpicture=0x7f0b0096;
+        public static final int ly_getpicture_child=0x7f0b0097;
+        public static final int ly_input_nickname=0x7f0b0089;
+        public static final int ly_input_nickname_child=0x7f0b008a;
+        public static final int ly_myinfo_changebirth=0x7f0b009b;
+        public static final int ly_myinfo_changebirth_child=0x7f0b009c;
+        public static final int met_input_city=0x7f0b008d;
+        public static final int met_input_nickname=0x7f0b00a5;
+        public static final int met_input_province=0x7f0b008c;
+        public static final int mrl_myinfo_cancel=0x7f0b00a3;
+        public static final int mrl_myinfo_sure=0x7f0b00a1;
         public static final int pd_loading=0x7f0b006e;
-        public static final int rb_change_boy=0x7f0b008e;
-        public static final int rb_change_girl=0x7f0b008f;
-        public static final int rg_change_sex=0x7f0b008d;
+        public static final int rb_change_boy=0x7f0b0094;
+        public static final int rb_change_girl=0x7f0b0095;
+        public static final int rg_change_sex=0x7f0b0093;
         public static final int rl_activityinfo_call=0x7f0b000d;
         public static final int rl_activityinfo_img=0x7f0b0002;
         public static final int rl_activityinfo_injoy=0x7f0b0005;
         public static final int rl_activityinfo_mark=0x7f0b000f;
-        public static final int rl_adapter_activity=0x7f0b0070;
-        public static final int rl_adapter_delicious=0x7f0b0076;
-        public static final int rl_adapter_mark=0x7f0b007d;
-        public static final int rl_back=0x7f0b00a2;
+        public static final int rl_adapter_activity=0x7f0b0076;
+        public static final int rl_adapter_delicious=0x7f0b007c;
+        public static final int rl_adapter_mark=0x7f0b0083;
+        public static final int rl_back=0x7f0b00a8;
+        public static final int rl_baojie=0x7f0b006f;
+        public static final int rl_chexian=0x7f0b0071;
         public static final int rl_deliciousdetail_img=0x7f0b001a;
         public static final int rl_deliciousdetail_mark=0x7f0b0020;
+        public static final int rl_ktv=0x7f0b0074;
         public static final int rl_main_qianggou=0x7f0b003d;
+        public static final int rl_meijia=0x7f0b0070;
+        public static final int rl_meirong=0x7f0b0072;
+        public static final int rl_meishi=0x7f0b0073;
         public static final int rl_tab_delicious=0x7f0b0044;
         public static final int rl_tab_game=0x7f0b0045;
         public static final int rl_tab_message=0x7f0b0046;
         public static final int rl_tab_new=0x7f0b0043;
         public static final int rl_tab_score=0x7f0b0047;
         public static final int rl_title=0x7f0b0029;
-        public static final int tempValue=0x7f0b00a1;
+        public static final int tempValue=0x7f0b00a7;
         public static final int title=0x7f0b0001;
-        public static final int tv_activity_content=0x7f0b0074;
-        public static final int tv_activity_divider=0x7f0b0073;
-        public static final int tv_activity_mount=0x7f0b0072;
+        public static final int tv_activity_content=0x7f0b007a;
+        public static final int tv_activity_divider=0x7f0b0079;
+        public static final int tv_activity_mount=0x7f0b0078;
         public static final int tv_activityinfo_address=0x7f0b000c;
         public static final int tv_activityinfo_content=0x7f0b0008;
         public static final int tv_activityinfo_divider1=0x7f0b0007;
@@ -359,17 +397,17 @@ containing a value of this type.
         public static final int tv_activityinfo_info=0x7f0b0004;
         public static final int tv_activityinfo_markcount=0x7f0b0010;
         public static final int tv_activityinfo_name=0x7f0b000b;
-        public static final int tv_adapter_delicious_alamcounts=0x7f0b0078;
-        public static final int tv_adapter_delicious_talkcounts=0x7f0b0079;
-        public static final int tv_adapter_name=0x7f0b0071;
-        public static final int tv_adapter_peoples_name=0x7f0b0082;
-        public static final int tv_adapter_peoples_state=0x7f0b0081;
+        public static final int tv_adapter_delicious_alamcounts=0x7f0b007e;
+        public static final int tv_adapter_delicious_talkcounts=0x7f0b007f;
+        public static final int tv_adapter_name=0x7f0b0077;
+        public static final int tv_adapter_peoples_name=0x7f0b0088;
+        public static final int tv_adapter_peoples_state=0x7f0b0087;
         public static final int tv_advertdetail_content=0x7f0b0019;
         public static final int tv_advertdetail_name=0x7f0b0018;
         public static final int tv_backpwd_code=0x7f0b002d;
-        public static final int tv_change_titlepage_title=0x7f0b008c;
-        public static final int tv_delicious_content=0x7f0b007b;
-        public static final int tv_delicious_divider=0x7f0b007a;
+        public static final int tv_change_titlepage_title=0x7f0b0092;
+        public static final int tv_delicious_content=0x7f0b0081;
+        public static final int tv_delicious_divider=0x7f0b0080;
         public static final int tv_deliciousdetail_content=0x7f0b001e;
         public static final int tv_deliciousdetail_divider1=0x7f0b001d;
         public static final int tv_deliciousdetail_divider4=0x7f0b0022;
@@ -377,14 +415,14 @@ containing a value of this type.
         public static final int tv_deliciousdetail_markcount=0x7f0b0021;
         public static final int tv_deliciousdetail_name=0x7f0b001c;
         public static final int tv_forgetpwd=0x7f0b0037;
-        public static final int tv_getpicture_title=0x7f0b0092;
-        public static final int tv_input_nickname_title=0x7f0b0085;
-        public static final int tv_left=0x7f0b00a3;
+        public static final int tv_getpicture_title=0x7f0b0098;
+        public static final int tv_input_nickname_title=0x7f0b008b;
+        public static final int tv_left=0x7f0b00a9;
         public static final int tv_main_hour=0x7f0b003e;
         public static final int tv_main_minute=0x7f0b003f;
         public static final int tv_main_seconds=0x7f0b0040;
-        public static final int tv_mark_content=0x7f0b007f;
-        public static final int tv_mark_time=0x7f0b007e;
+        public static final int tv_mark_content=0x7f0b0085;
+        public static final int tv_mark_time=0x7f0b0084;
         public static final int tv_me_name=0x7f0b004b;
         public static final int tv_myinfo_address=0x7f0b0059;
         public static final int tv_myinfo_birthday=0x7f0b005b;
@@ -396,14 +434,14 @@ containing a value of this type.
         public static final int tv_register_pwd=0x7f0b0064;
         public static final int tv_register_virticalline=0x7f0b005f;
         public static final int tv_register_xieyi=0x7f0b0068;
-        public static final int tv_right=0x7f0b00a5;
+        public static final int tv_right=0x7f0b00ab;
         public static final int tv_setpwd_code=0x7f0b0069;
         public static final int tv_setpwd_pwd=0x7f0b006b;
-        public static final int tv_share_title=0x7f0b0097;
-        public static final int tv_titile=0x7f0b00a4;
-        public static final int wv_birth_day=0x7f0b009a;
-        public static final int wv_birth_month=0x7f0b0099;
-        public static final int wv_birth_year=0x7f0b0098;
+        public static final int tv_share_title=0x7f0b009d;
+        public static final int tv_titile=0x7f0b00aa;
+        public static final int wv_birth_day=0x7f0b00a0;
+        public static final int wv_birth_month=0x7f0b009f;
+        public static final int wv_birth_year=0x7f0b009e;
     }
     public static final class integer {
         public static final int circular_progress_max=0x7f060001;
@@ -428,19 +466,20 @@ containing a value of this type.
         public static final int activity_register=0x7f03000e;
         public static final int activity_setpwd=0x7f03000f;
         public static final int activity_start=0x7f030010;
-        public static final int activity_wait=0x7f030011;
-        public static final int adapter_activity=0x7f030012;
-        public static final int adapter_delicious=0x7f030013;
-        public static final int adapter_mark=0x7f030014;
-        public static final int adapter_peoples=0x7f030015;
-        public static final int dialog_address=0x7f030016;
-        public static final int dialog_change_sex=0x7f030017;
-        public static final int dialog_getpicture=0x7f030018;
-        public static final int dialog_myinfo_changebirth=0x7f030019;
-        public static final int dialog_nickname=0x7f03001a;
-        public static final int divider=0x7f03001b;
-        public static final int item_birth_year=0x7f03001c;
-        public static final int title=0x7f03001d;
+        public static final int activity_union=0x7f030011;
+        public static final int activity_wait=0x7f030012;
+        public static final int adapter_activity=0x7f030013;
+        public static final int adapter_delicious=0x7f030014;
+        public static final int adapter_mark=0x7f030015;
+        public static final int adapter_peoples=0x7f030016;
+        public static final int dialog_address=0x7f030017;
+        public static final int dialog_change_sex=0x7f030018;
+        public static final int dialog_getpicture=0x7f030019;
+        public static final int dialog_myinfo_changebirth=0x7f03001a;
+        public static final int dialog_nickname=0x7f03001b;
+        public static final int divider=0x7f03001c;
+        public static final int item_birth_year=0x7f03001d;
+        public static final int title=0x7f03001e;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
@@ -477,11 +516,60 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f090001;
+        /**  无描边头像 
+         */
+        public static final int CircleHeadNoBorder=0x7f090003;
         /**  分享对话框样式 
          */
         public static final int ShareDialog=0x7f090002;
     }
     public static final class styleable {
+        /**  圆形图片 
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CircleImageView_border_color com.youyou.app:border_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_border_width com.youyou.app:border_width}</code></td><td></td></tr>
+           </table>
+           @see #CircleImageView_border_color
+           @see #CircleImageView_border_width
+         */
+        public static final int[] CircleImageView = {
+            0x7f010002, 0x7f010003
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.youyou.app.R.attr#border_color}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.youyou.app:border_color
+        */
+        public static final int CircleImageView_border_color = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.youyou.app.R.attr#border_width}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.youyou.app:border_width
+        */
+        public static final int CircleImageView_border_width = 0;
         /**  RadioButton Attribute 
            <p>Includes the following attributes:</p>
            <table>

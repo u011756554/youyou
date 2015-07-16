@@ -5,6 +5,7 @@ import java.io.InputStream;
 
 import com.youyou.app.AppContext;
 import com.youyou.app.R;
+import com.youyou.app.bean.message.BaseBean;
 import com.youyou.app.net.Event;
 import com.youyou.app.net.EventBus;
 import com.youyou.app.net.EventCode;
@@ -20,6 +21,7 @@ import com.youyou.app.widget.ChangeSexDialog.SEX;
 import com.youyou.app.widget.GetPicTureDialog;
 import com.youyou.app.widget.GetPicTureDialog.DialogListener;
 import com.youyou.app.widget.NickNameDialog;
+import com.youyou.app.widget.RoundImageView;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -36,7 +38,7 @@ import android.widget.TextView;
 
 public class MyInfoActivity extends BaseActivity {
 
-	private ImageView ivHead;
+	private RoundImageView ivHead;
 	private RelativeLayout rlNickName;
 	private RelativeLayout rlGender;
 	private RelativeLayout rlAddress;
@@ -50,6 +52,7 @@ public class MyInfoActivity extends BaseActivity {
 	private GetPicTureDialog getPicTureDialog;
 	private AddressDialog addressDialog;
 	private NickNameDialog nickNameDialog;
+	
 	@Override
 	protected void onCreate(Bundle arg0) {
 		// TODO Auto-generated method stub
@@ -59,7 +62,7 @@ public class MyInfoActivity extends BaseActivity {
 	}
 
 	private void initView() {
-		ivHead = (ImageView) findViewById(R.id.iv_myinfo_head);
+		ivHead = (RoundImageView) findViewById(R.id.iv_myinfo_head);
 		rlNickName = (RelativeLayout) findViewById(R.id.ll_nickname);
 		rlGender = (RelativeLayout) findViewById(R.id.ll_gender);
 		rlAddress = (RelativeLayout) findViewById(R.id.ll_address);
@@ -80,8 +83,55 @@ public class MyInfoActivity extends BaseActivity {
 		rlAddress.setOnClickListener(this);
 		rlBirthday.setOnClickListener(this);
 		rlAddress.setOnClickListener(this);
+		
+		setTitle("个人信息");
+		addBack(true);
+		addRight("保存");
 	}
 
+	@Override
+	protected void clickRight() {
+		EventBus eventBus = new EventBus();
+		String nickName = tvNickName.getText().toString();
+		String gender = "";
+		if(!TextUtils.isEmpty(tvGender.getText().toString())){
+			if ("男".equals(tvGender.getText().toString())) {
+				gender = com.youyou.app.bean.config.SEX.MAN.getAttribute();
+			} else if ("女".equals(tvGender.getText().toString())) {
+				gender = com.youyou.app.bean.config.SEX.FEMAL.getAttribute();
+			}
+		}
+		String birth = tvBirthday.getText().toString();
+		String address = tvAddress.getText().toString();
+		String province = "";
+		String city = "";
+		if (!TextUtils.isEmpty(address)) {
+			String [] adds = address.split("-");
+			province = adds[0];
+			city = adds[1];
+		}
+		eventBus.setListener(new EventListener() {
+			
+			@Override
+			public void onEventRunEnd(Event event) {
+				if (event.isSuccess()) {
+					showToast("修改信息成功");
+				} else {
+					if (event.getFailException() != null) {
+						showToast(event.getFailException().getMessage());
+					} else {
+						BaseBean msg = (BaseBean) event.getReturnParamAtIndex(0);
+						if (msg != null && !TextUtils.isEmpty(msg.getMessage())) {
+							showToast(msg.getMessage());
+						}
+					}
+				}
+			}
+		});
+		eventBus.pushEvent(EventCode.HTTP_UPDATEUSER, nickName,gender,birth,province,city);
+	}
+
+	
 	private static final int CODE_IMAGE_CAPTURE = 0x11;
 	private static final int SELECT_PIC_KITKAT = 0x12;
 	private static final int SELECT_PIC = 0x13;
@@ -141,6 +191,7 @@ public class MyInfoActivity extends BaseActivity {
 					} else {
 						tvGender.setText("女");
 					}
+					mChangeSexDialog.dismiss();
 				}
 			});
 			break;
@@ -258,8 +309,7 @@ public class MyInfoActivity extends BaseActivity {
 	        c.moveToFirst();
 	        int columnIndex = c.getColumnIndex(filePathColumns[0]);
 	        String picturePath = c.getString(columnIndex);
-	        
-	        startPhotoZoom(Uri.parse(Uri.parse(picturePath).getPath()));
+	        startPhotoZoom(Uri.parse(PictureUtils.instance().getUriPath(picturePath)));
 			break;
 		
 		case CROP_IMAGE:
@@ -272,8 +322,18 @@ public class MyInfoActivity extends BaseActivity {
 						
 						@Override
 						public void onEventRunEnd(Event event) {
-							// TODO Auto-generated method stub
-							
+							if (event.isSuccess()) {
+								showToast("修改头像成功");
+							} else {
+								if (event.getFailException() != null) {
+									showToast(event.getFailException().getMessage());
+								} else {
+									BaseBean msg = (BaseBean) event.getReturnParamAtIndex(0);
+									if (msg != null) {
+										showToast(msg.getMessage());
+									}
+								}
+							}
 						}
 					});
 					eventBus.pushEvent(EventCode.HTTP_PORTRAIT, file);
@@ -287,7 +347,7 @@ public class MyInfoActivity extends BaseActivity {
 				     String caputrePicturePath = PictureUtils.instance().getUriPath();
 				     System.out.println("path:"+caputrePicturePath);
 				     String resultpath = PictureUtils.instance().compressFileToFile(caputrePicturePath);
-				     startPhotoZoom(Uri.parse(Uri.parse(resultpath).getPath()));
+				     startPhotoZoom(Uri.parse(PictureUtils.instance().getUriPath(resultpath)));
 				} catch (Exception e) {
 					// TODO: handle exception
 					showToast("获取头像失败");
@@ -302,7 +362,7 @@ public class MyInfoActivity extends BaseActivity {
 			    	 if (bundle != null) {                 
 			    		 Bitmap  photo = (Bitmap) bundle.get("data");  
 			    		 String path = PictureUtils.instance().compressBitmapToFile(photo);
-			    		 startPhotoZoom(Uri.parse(Uri.parse(path).getPath()));
+			    		 startPhotoZoom(Uri.parse(PictureUtils.instance().getUriPath(path)));
 			    	 }   
 			       }else{
 			    	   System.out.println(uri.toString());
@@ -315,11 +375,11 @@ public class MyInfoActivity extends BaseActivity {
 				       String path = PictureUtils.instance().compressFileToFile(filePath);
 				       System.out.println("最终路径："+path);
 				       cur.close();
-				       startPhotoZoom(Uri.parse(Uri.parse(path).getPath()));
+				       startPhotoZoom(Uri.parse(PictureUtils.instance().getUriPath(path)));
 			       }   
 			}
 			break;
 		}
 	}
-	
+
 }

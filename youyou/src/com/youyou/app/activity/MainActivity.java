@@ -127,8 +127,8 @@ public class MainActivity extends BaseActivity {
 			break;
 			
 		case R.id.rl_tab_message:
-			Intent messageIntent = new Intent(MainActivity.this,MessageActivity.class);
-			startActivity(messageIntent);
+			Intent unionIntent = new Intent(MainActivity.this,UnionActivity.class);
+			startActivity(unionIntent);
 			break;
 			
 		case R.id.rl_tab_new:

@@ -124,6 +124,10 @@
         <activity 
             android:name="com.youyou.app.activity.WaitActivity"
             android:launchMode="singleTask"></activity> 
+            
+        <activity 
+            android:name="com.youyou.app.activity.UnionActivity"
+            android:launchMode="singleTask"></activity>         
       
     </application>
 
