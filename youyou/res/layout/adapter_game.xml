@@ -1,0 +1,87 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/no3_bg"
+    android:orientation="horizontal"> 
+
+    <RelativeLayout
+        android:id="@+id/adapter_game_id1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@color/no4_bg">
+        
+        <ImageView
+            android:id="@+id/iv_adapter_game_iv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"/>
+        
+        <TextView 
+            android:id="@+id/tv_adpater_game_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_adapter_game_iv1"
+            android:layout_marginTop="3dp"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/adapter_game_id2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@color/no4_bg">
+        
+        <ImageView
+            android:id="@+id/iv_adapter_game_iv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"/>
+        
+        <TextView 
+            android:id="@+id/tv_adpater_game_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_adapter_game_iv2"
+            android:layout_marginTop="3dp"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/adapter_game_id3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/no4_bg">
+        
+        <ImageView
+            android:id="@+id/iv_adapter_game_iv3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"/>
+        
+        <TextView 
+            android:id="@+id/tv_adpater_game_name3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_adapter_game_iv3"
+            android:layout_marginTop="3dp"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"/>
+        
+    </RelativeLayout>    
+        	
+</LinearLayout>

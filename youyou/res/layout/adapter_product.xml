@@ -1,0 +1,114 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/no3_bg"
+    android:orientation="horizontal"> 
+
+    <RelativeLayout
+        android:id="@+id/adapter_product_id1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@color/no4_bg">
+        
+        <ImageView
+            android:id="@+id/iv_adapter_product_iv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"/>
+        
+        <TextView 
+            android:id="@+id/tv_adpater_product_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_adapter_product_iv1"
+            android:layout_marginTop="3dp"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"/>
+        
+        <TextView 
+            android:id="@+id/tv_adpater_product_count1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_adpater_product_name1"
+            android:layout_marginTop="3dp"
+            android:textSize="12sp"
+            android:textColor="#ff7ff0"/>        
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/adapter_product_id2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@color/no4_bg">
+        
+        <ImageView
+            android:id="@+id/iv_adapter_product_iv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"/>
+        
+        <TextView 
+            android:id="@+id/tv_adpater_product_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_adapter_product_iv2"
+            android:layout_marginTop="3dp"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"/>
+        
+        <TextView 
+            android:id="@+id/tv_adpater_product_count2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_adpater_product_name2"
+            android:layout_marginTop="3dp"
+            android:textSize="12sp"
+            android:textColor="#ff7ff0"/>         
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/adapter_product_id3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/no4_bg">
+        
+        <ImageView
+            android:id="@+id/iv_adapter_product_iv3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"/>
+        
+        <TextView 
+            android:id="@+id/tv_adpater_product_name3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_adapter_product_iv3"
+            android:layout_marginTop="3dp"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"/>
+        
+        <TextView 
+            android:id="@+id/tv_adpater_product_count3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_adpater_product_name3"
+            android:layout_marginTop="3dp"
+            android:textSize="12sp"
+            android:textColor="#ff7ff0"/>         
+        
+    </RelativeLayout>    
+        	
+</LinearLayout>
