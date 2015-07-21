@@ -13,8 +13,10 @@ import com.youyou.app.bean.message.AdvertListBean;
 import com.youyou.app.bean.message.BaseBean;
 import com.youyou.app.bean.message.CurrentActivityListBean;
 import com.youyou.app.bean.message.FoodStoryListBean;
+import com.youyou.app.bean.message.GameMsgBean;
 import com.youyou.app.bean.message.LoginMsgBean;
 import com.youyou.app.bean.message.MarkMsgBean;
+import com.youyou.app.bean.message.MessageBean;
 import com.youyou.app.bean.message.PeopleMsgBean;
 
 import android.os.AsyncTask;
@@ -489,7 +491,13 @@ public class EventBus {
 						}
 						Log.i(AppContext.APP_TAG, result);
 						System.out.println("login result:"+result);
-						
+						GameMsgBean msgBean = g.fromJson(result, GameMsgBean.class);
+						if (msgBean.isSuccess()) {
+							event.addReturnParam(msgBean.getData());
+							event.setSuccess(true);
+						} else {
+							event.setSuccess(false);
+						}
 					}
 					
 					if (event.getEventCode() == EventCode.HTTP_PORTRAIT) {
@@ -543,6 +551,57 @@ public class EventBus {
 						BaseBean msg = g.fromJson(result, BaseBean.class);
 						event.addReturnParam(msg);
 						if (msg.isSuccess()) {
+							event.setSuccess(true);
+						} else {
+							event.setSuccess(false);
+						}
+					}
+					
+					if (event.getEventCode() == EventCode.HTTP_USERCOMMENTS) {
+						String content = (String) event.getParamAtIndex(0);
+						
+						HashMap<String, String> map = new HashMap<String, String>();
+						map.put("content", content);
+						
+						String result = HttpUtils.doPost(URLUtils.USERCOMMENTS, map, true);
+						if (TextUtils.isEmpty(result)) {
+							event.setSuccess(false);
+							event.setFailException(new Exception("网络连失败，请检查网络"));
+							return event;
+						}
+						
+						Log.i(AppContext.APP_TAG, result);
+						System.out.println("login result:"+result);
+						BaseBean msg = g.fromJson(result, BaseBean.class);
+						event.addReturnParam(msg);
+						if (msg.isSuccess()) {
+							event.setSuccess(true);
+						} else {
+							event.setSuccess(false);
+						}
+					}
+					
+					if (event.getEventCode() == EventCode.HTTP_GETNOTICE) {
+						String start = (String) event.getParamAtIndex(0);
+						String limit = (String) event.getParamAtIndex(0);
+						
+						
+						HashMap<String, String> map = new HashMap<String, String>();
+						map.put("start", start);
+						map.put("limit", limit);
+						
+						String result = HttpUtils.doPost(URLUtils.GETNOTICE, map, true);
+						if (TextUtils.isEmpty(result)) {
+							event.setSuccess(false);
+							event.setFailException(new Exception("网络连失败，请检查网络"));
+							return event;
+						}
+						
+						Log.i(AppContext.APP_TAG, result);
+						System.out.println("login result:"+result);
+						MessageBean msg = g.fromJson(result, MessageBean.class);
+						if (msg.isSuccess()) {
+							event.addReturnParam(msg);
 							event.setSuccess(true);
 						} else {
 							event.setSuccess(false);

@@ -2,7 +2,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/no3_bg"
     android:orientation="horizontal"> 
 
     <RelativeLayout
@@ -25,7 +24,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/iv_adapter_game_iv1"
-            android:layout_marginTop="3dp"
+            android:padding="5dp"
+            android:singleLine="true"
             android:textSize="15sp"
             android:textColor="@android:color/black"/>
         
@@ -51,7 +51,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/iv_adapter_game_iv2"
-            android:layout_marginTop="3dp"
+            android:padding="5dp"
+            android:singleLine="true"
             android:textSize="15sp"
             android:textColor="@android:color/black"/>
         
@@ -78,7 +79,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/iv_adapter_game_iv3"
-            android:layout_marginTop="3dp"
+            android:padding="5dp"
+            android:singleLine="true"
             android:textSize="15sp"
             android:textColor="@android:color/black"/>
         

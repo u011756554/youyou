@@ -11,4 +11,8 @@
     <color name="no10_orange">#e77a32</color>
     <color name="no11_gray">#bbbec2</color>
     <color name="no12_gray">#b3b3b3</color>
+    
+    <color name="no13_touming">#00000000</color>
+	<color name="no14_gray_white">#6f7179</color>
+	<color name="no15_dialog_bg">#C0C0C0</color>	
 </resources>

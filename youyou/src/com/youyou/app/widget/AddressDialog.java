@@ -51,7 +51,7 @@ public class AddressDialog extends Dialog implements android.view.View.OnClickLi
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.dialog_nickname);
+		setContentView(R.layout.dialog_address);
 		edtProvinceEditText = (EditText) findViewById(R.id.met_input_province);
 		edtCityEditText = (EditText) findViewById(R.id.met_input_city);
 		btnSure = (Button) findViewById(R.id.btn_input_sure);

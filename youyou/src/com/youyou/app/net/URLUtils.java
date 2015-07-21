@@ -45,5 +45,9 @@ public class URLUtils {
 	public static final String PORTRAIT = SERVER+"portrait";
 	
 	public static final String UPDATEUSER = SERVER+"updateUser";
+	
+	public static final String USERCOMMENTS = SERVER+"userComments";
+	
+	public static final String GETNOTICE = SERVER+"getNotice";
 }
 

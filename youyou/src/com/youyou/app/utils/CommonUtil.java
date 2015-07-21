@@ -16,6 +16,7 @@ import android.net.wifi.WifiManager;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 /**
@@ -100,10 +101,9 @@ public class CommonUtil {
 	 * @param context
 	 * @return
 	 */
-	public static int getScreenWidth(Activity activity) {
-		DisplayMetrics dm = new DisplayMetrics();
-		activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
-		return dm.widthPixels;
+	public static int getScreenWidth(Context context) {
+		WindowManager wmManager = (WindowManager) context.getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
+		return wmManager.getDefaultDisplay().getWidth();
 	}
 
 	/**
@@ -112,10 +112,9 @@ public class CommonUtil {
 	 * @param context
 	 * @return
 	 */
-	public static int getScreenHeight(Activity activity) {
-		DisplayMetrics dm = new DisplayMetrics();
-		activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
-		return dm.heightPixels;
+	public static int getScreenHeight(Context context) {
+		WindowManager wmManager = (WindowManager) context.getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
+		return wmManager.getDefaultDisplay().getHeight();
 	}
 
 	/**
