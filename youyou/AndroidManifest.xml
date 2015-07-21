@@ -127,7 +127,15 @@
             
         <activity 
             android:name="com.youyou.app.activity.UnionActivity"
-            android:launchMode="singleTask"></activity>         
+            android:launchMode="singleTask"></activity>   
+            
+        <activity 
+            android:name="com.youyou.app.activity.MessageDeatilActivity"
+            android:launchMode="singleTask"></activity>  
+            
+        <activity 
+            android:name="com.youyou.app.activity.FeedBackActivity"
+            android:launchMode="singleTask"></activity>          
       
     </application>
 
