@@ -205,7 +205,12 @@ public class EventBus {
 						}
 						Log.i(AppContext.APP_TAG, result);
 						System.out.println("login result:"+result);
-						
+						BaseBean msg = g.fromJson(result, BaseBean.class);
+						if (msg.isSuccess()) {
+							event.setSuccess(true);
+						} else {
+							event.setSuccess(false);
+						}
 					}	
 					
 					if(event.getEventCode() == EventCode.HTTP_CANCELCOMMEND) {

@@ -6,9 +6,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
@@ -22,6 +24,7 @@ public class GameAdapter extends BaseAdapter {
 	private List<Game> list;
 	private Context context;
 	private Activity activity;
+	private UpdateListener listener;
 	
 	public GameAdapter(Context context) {
 		this.context = context;
@@ -93,34 +96,63 @@ public class GameAdapter extends BaseAdapter {
 			holder.name2 = (TextView) convertView.findViewById(R.id.tv_adpater_game_name2);
 			holder.name3 = (TextView) convertView.findViewById(R.id.tv_adpater_game_name3);
 			
+			holder.rl1 = (RelativeLayout) convertView.findViewById(R.id.adapter_game_id1);
+			holder.rl2 = (RelativeLayout) convertView.findViewById(R.id.adapter_game_id2);
+			holder.rl3 = (RelativeLayout) convertView.findViewById(R.id.adapter_game_id3);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		Game game1 = list.get(position * 3);
+		final Game game1 = list.get(position * 3);
 		ImageLoaderUtil.diaPlayNormal(game1.getPicUrl(), holder.iv1, R.drawable.icon_default_bg, null);
 		holder.name1.setText(game1.getName());
+		holder.rl1.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				listener.click(game1);
+			}
+		});
 		
 		if ((position * 3 +1) < list.size()) {
 			holder.iv2.setVisibility(View.VISIBLE);
 			holder.name2.setVisibility(View.VISIBLE);
-			Game game2 = list.get(position * 3 +1);
+			holder.rl2.setVisibility(View.VISIBLE);
+			final Game game2 = list.get(position * 3 +1);
 			ImageLoaderUtil.diaPlayNormal(game2.getPicUrl(), holder.iv2, R.drawable.icon_default_bg, null);
 			holder.name2.setText(game2.getName());	
+			holder.rl2.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					listener.click(game2);
+				}
+			});
+			
 		} else {
 			holder.iv2.setVisibility(View.GONE);
 			holder.name2.setVisibility(View.GONE);
+			holder.rl2.setVisibility(View.GONE);
 		}
 		
 		if ((position * 3 +2) < list.size()) {
 			holder.iv3.setVisibility(View.VISIBLE);
 			holder.name3.setVisibility(View.VISIBLE);
-			Game game3 = list.get(position * 3 +2);
+			holder.rl3.setVisibility(View.VISIBLE);
+			final Game game3 = list.get(position * 3 +2);
 			ImageLoaderUtil.diaPlayNormal(game3.getPicUrl(), holder.iv3, R.drawable.icon_default_bg, null);
 			holder.name3.setText(game3.getName());	
+			holder.rl3.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					listener.click(game3);
+				}
+			});			
 		} else {
 			holder.iv3.setVisibility(View.GONE);
 			holder.name3.setVisibility(View.GONE);
+			holder.rl3.setVisibility(View.GONE);
 		}
 		return convertView;
 	}
@@ -149,14 +181,25 @@ public class GameAdapter extends BaseAdapter {
 	}
 	
 	private class ViewHolder {
+		RelativeLayout rl1;
 		ImageView iv1;
 		TextView name1;
 		
+		RelativeLayout rl2;
 		ImageView iv2;
 		TextView name2;
 		
+		RelativeLayout rl3;
 		ImageView iv3;
 		TextView name3;
+	}
+	
+	public void setListener(UpdateListener updateListener) {
+		this.listener = updateListener;
+	}
+	
+	public interface UpdateListener {
+		void click(Game game);
 	}
 
 }

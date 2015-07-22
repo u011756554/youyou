@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="18" />
+        android:targetSdkVersion="22" />
 
     <!-- 访问网络，网络定位需要上网-->
 	<uses-permission android:name="android.permission.INTERNET" /> 
@@ -135,7 +135,20 @@
             
         <activity 
             android:name="com.youyou.app.activity.FeedBackActivity"
-            android:launchMode="singleTask"></activity>          
+            android:launchMode="singleTask"></activity>   
+            
+        <activity 
+            android:name="com.youyou.app.activity.SetActivity"
+            android:launchMode="singleTask"></activity> 
+            
+        <activity 
+            android:name="com.youyou.app.activity.AboutActivity"
+            android:launchMode="singleTask"></activity>  
+            
+        <activity 
+            android:name="com.youyou.app.activity.GameDetailActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"></activity>        
       
     </application>
 

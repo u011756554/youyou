@@ -1,0 +1,265 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no4_bg">
+
+    <include
+        android:id="@+id/title" 
+        layout="@layout/title"/>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    
+		    <RelativeLayout
+		        android:id="@+id/rl_game_img"
+		        android:layout_width="match_parent"
+		        android:layout_height="150dp">
+		        
+		        <ImageView
+		            android:id="@+id/iv_game_img"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:background="@drawable/logo"
+		            android:scaleType="fitXY"/>
+		        
+		        <RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="30dp"
+		            android:layout_alignParentBottom="true"
+		            android:background="@drawable/bg_gray">
+		            
+		            <TextView
+		                android:id="@+id/tv_game_info"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerInParent="true"
+		                android:text="波斯王子：斗地主"
+		                android:textSize="@dimen/textsize_no1"
+		                android:textColor="@android:color/white"/>
+		            
+		        </RelativeLayout>    
+		        
+		    </RelativeLayout>  
+		    
+		    <RelativeLayout
+		        android:id="@+id/rl_game_download_title"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/rl_game_img"
+		        android:layout_marginTop="@dimen/size_no1"
+		        android:layout_marginLeft="@dimen/size_no2"
+		        android:layout_marginRight="@dimen/size_no2">
+		        
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:text="游戏描述"
+		            android:textSize="@dimen/textsize_no5"
+		            android:textColor="@android:color/black"/>
+		        
+		        <RelativeLayout
+		            android:id="@+id/rl_gameinfo_download"
+		            android:layout_width="80dp"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true">
+		            
+		            <TextView
+		                android:layout_width="1px"
+		                android:layout_height="match_parent"
+		                android:layout_marginTop="5dp"
+		                android:layout_marginBottom="5dp"
+		                android:background="@color/no11_gray"/>
+		                
+		            <LinearLayout
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerInParent="true"
+		                android:orientation="vertical">    
+		            
+						<ImageView
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+						    android:layout_gravity="center_horizontal"
+						    android:background="@drawable/icon_download"/>
+						
+						<TextView
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+						    android:layout_gravity="center_horizontal"
+						    android:layout_marginTop="2dp"
+						    android:text="下载"
+						    android:textSize="12dp"
+						    android:textColor="#a0c86c"/>		                
+		                
+		            </LinearLayout>    
+		            
+		        </RelativeLayout>    
+
+		            
+		    </RelativeLayout>
+		    
+		    <TextView
+		        android:id="@+id/tv_game_divider1"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_below="@id/rl_game_download_title"
+		        android:layout_marginTop="@dimen/size_no1"
+		        android:background="#cccccc"/>
+		    
+		    <TextView
+		        android:id="@+id/tv_game_content"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/tv_game_divider1"
+		        android:layout_margin="@dimen/size_no2"
+		        android:text="最近，网上很流行一个词：全栈(Full Stack)工程师，也可以叫全端工程师，无论是前端知识，还是后端架构你都要了解。甚至有些调皮的程序员这样理解全栈工程师：全栈工程师=屌丝战斗机=系统+网络+研发+dba+架构+安全=没女朋友、拿一份工资做三份事情的典型、每个站长都是一个全栈工程师，每个站群的站长都是超级全栈工程师。"
+		        android:textSize="@dimen/textsize_no6"
+		        android:textColor="#999999"/>
+		
+		    <LinearLayout
+		        android:id="@+id/ic_game_divider2"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/tv_game_content"
+		        android:orientation="vertical">
+				
+			    <include
+			        layout="@layout/divider"/>        
+		        
+		    </LinearLayout>    
+		    
+		    <RelativeLayout
+		        android:id="@+id/rl_game_mark"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="@dimen/size_no2"
+		        android:layout_below="@id/ic_game_divider2">
+			    
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:text="多人评论"
+		            android:textSize="@dimen/textsize_no5"
+		            android:textColor="@android:color/black"/>
+		        
+		        <TextView
+		            android:id="@+id/tv_game_markcount"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:text="0条评论"
+		            android:textColor="#999999"
+		            android:textSize="@dimen/textsize_no3"/>
+		    </RelativeLayout> 
+		    
+		    <TextView
+		        android:id="@+id/tv_game_divider4"
+		        android:layout_width="match_parent"
+		        android:layout_height="1px"
+		        android:layout_below="@id/rl_game_mark"
+		        android:background="#d9d9d9"/>
+		    
+		    <com.youyou.app.widget.MyListView
+		        android:id="@+id/lv_game_mark"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/tv_game_divider4"
+		        android:layout_margin="@dimen/size_no2"
+		        android:divider="#d9d9d9"
+		        android:dividerHeight="1px"/>
+		    		    
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/lv_game_mark"
+		        android:paddingBottom="@dimen/size_no2">
+		        
+		        <TextView
+		            android:id="@+id/tv_game_divider5"
+		            android:layout_width="match_parent"
+		            android:layout_height="1dp"
+		            android:background="#b3b3b3"/>
+		        
+		        <RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="50dp"
+		            android:layout_below="@id/tv_game_divider5"
+		            android:layout_margin="@dimen/size_no2">
+		            
+		            <Button
+		                android:id="@+id/btn_game_mark"
+		                android:layout_width="wrap_content"
+		                android:layout_height="match_parent"
+		                android:layout_alignParentRight="true"
+		                android:padding="@dimen/size_no2"
+		                android:layout_centerVertical="true"
+		                android:background="@drawable/bg_mark"
+		                android:text="发表评论"
+		                android:textColor="@android:color/black"
+		                android:textSize="@dimen/textsize_no5"/>
+		            
+		            <RelativeLayout
+		                android:id="@+id/rl_gameinfo_zan"
+		                android:layout_width="50dp"
+		                android:layout_height="50dp">
+						
+			            <ImageView
+			                android:id="@+id/btn_gameinfo_zan"
+			                android:layout_width="30dp"
+			                android:layout_height="30dp"
+			                android:background="@drawable/zan_selector"
+			                android:layout_margin="10dp"
+			                android:layout_centerVertical="true"/>		                
+		                
+		            </RelativeLayout>    
+		            
+		            <RelativeLayout
+		                android:layout_width="match_parent"
+		                android:layout_height="match_parent"
+		                android:layout_toLeftOf="@id/btn_game_mark"
+		                android:layout_toRightOf="@id/rl_gameinfo_zan"
+		                android:layout_centerVertical="true"
+		                android:background="@drawable/bg_mark"
+		                android:layout_marginRight="@dimen/size_no2">
+		                
+		                <ImageView
+		                    android:id="@+id/iv_game_write"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_centerVertical="true"
+		                    android:layout_marginLeft="@dimen/size_no3"
+		                    android:background="@drawable/icon_write"/>
+		                
+		                <EditText
+		                    android:id="@+id/edt_game_mark"
+		                    android:layout_width="match_parent"
+		                    android:layout_height="match_parent"
+		                    android:background="@null"
+		                    android:layout_toRightOf="@id/iv_game_write"
+		                    android:layout_centerVertical="true"
+		                    android:layout_marginLeft="@dimen/size_no2"
+		                    android:layout_marginRight="@dimen/size_no2"
+		                    android:hint="说说你的看法吧"
+		                    android:textSize="@dimen/textsize_no5"
+		                    android:textColorHighlight="#c4c7cc"
+		                    android:textColor="@android:color/black"
+		                    android:singleLine="true"/>
+		                
+		            </RelativeLayout>   
+		            
+		        </RelativeLayout>    
+		        
+		    </RelativeLayout>    
+		        
+		</RelativeLayout>
+	</ScrollView>   
+</RelativeLayout>

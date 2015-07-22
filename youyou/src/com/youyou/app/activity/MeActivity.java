@@ -78,8 +78,8 @@ public class MeActivity extends BaseActivity{
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
+				Intent intent = new Intent(MeActivity.this,SetActivity.class);
+				startActivity(intent);
 			}
 		});
 		

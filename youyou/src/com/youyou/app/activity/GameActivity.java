@@ -5,11 +5,13 @@ import java.util.List;
 
 import com.youyou.app.R;
 import com.youyou.app.adapter.GameAdapter;
+import com.youyou.app.adapter.GameAdapter.UpdateListener;
 import com.youyou.app.bean.Game;
 import com.youyou.app.net.Event;
 import com.youyou.app.net.EventBus;
 import com.youyou.app.net.EventCode;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -30,19 +32,23 @@ public class GameActivity extends RefreshAndLoadActivity {
 	}
 	
 	private void initView() {
-		listView.setOnItemClickListener(new OnItemClickListener() {
 
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				Game game = list.get(position);
-			}
-		});
 	}
 
 	@Override
 	protected void initAdapter() {
 		adapter = new GameAdapter(context);
 		adapter.setData(list);
+		adapter.setListener(new UpdateListener() {
+
+			@Override
+			public void click(Game game) {
+				Intent gameIntent = new Intent(GameActivity.this,GameDetailActivity.class);
+				gameIntent.putExtra(GameDetailActivity.KEY_GAME, game);
+				startActivity(gameIntent);
+			}
+			
+		});
 		mAdapter = adapter;
 	}
 

@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no3_bg"> 
+
+    <include
+        layout="@layout/title"/>
+    
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/rl_title"
+	    android:orientation="vertical">
+	    
+	    <RelativeLayout
+	        android:id="@+id/rl_set_feedback"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:background="@android:color/white">
+	        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="12dp"
+	            android:text="反馈"
+	            android:textSize="15sp"
+	            android:textColor="@android:color/black"/>
+	        
+	        <ImageView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginRight="12dp"
+	            android:background="@drawable/icon_allow_right"/>
+	        
+	    </RelativeLayout>    
+	    
+	    <include layout="@layout/divider"/>
+	    
+	    <RelativeLayout
+	        android:id="@+id/rl_set_about"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:background="@android:color/white">
+	        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="12dp"
+	            android:text="关于游游"
+	            android:textSize="15sp"
+	            android:textColor="@android:color/black"/>
+	        
+	        <ImageView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginRight="12dp"
+	            android:background="@drawable/icon_allow_right"/>
+	        
+	    </RelativeLayout>   	    
+	    
+	    <include layout="@layout/divider"/>
+	    
+	    <RelativeLayout
+	        android:id="@+id/rl_set_exit"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:background="@android:color/white">
+	        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="12dp"
+	            android:text="退出游游"
+	            android:textSize="15sp"
+	            android:textColor="@android:color/black"/>
+	        
+	        <ImageView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginRight="12dp"
+	            android:background="@drawable/icon_allow_right"/>
+	        
+	    </RelativeLayout>   	   	    
+	    
+	</LinearLayout>
+	
+	<RelativeLayout
+	    android:id="@+id/rl_set_exit_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:visibility="gone"
+	    android:background="#77000000">
+    
+		<RelativeLayout
+		    android:id="@+id/rl_set_close_btn"
+		    android:layout_width="match_parent"
+		    android:layout_height="60dp"
+		    android:layout_marginLeft="50dp"
+		    android:layout_marginRight="50dp"
+		    android:layout_alignParentBottom="true"
+		    android:background="@drawable/btn_main_bg"
+		    android:layout_marginBottom="50dp">	    
+	    
+		    
+		    <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:orientation="horizontal">
+		        
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:background="@drawable/icon_close"/>
+		        
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:layout_marginLeft="12dp"
+		            android:text="关闭游游"
+		            android:textSize="12sp"
+		            android:textColor="@android:color/white"/>
+		        
+		    </LinearLayout>    
+		    
+		</RelativeLayout>
+		
+		<RelativeLayout
+		    android:id="@+id/rl_set_exit_btn"
+		    android:layout_width="match_parent"
+		    android:layout_height="60dp"
+		    android:layout_marginLeft="50dp"
+		    android:layout_marginRight="50dp"
+		    android:layout_above="@id/rl_set_close_btn"
+		    android:background="@drawable/btn_gray_bg"
+		    android:layout_marginBottom="20dp">	    
+	    
+		    
+		    <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:orientation="horizontal">
+		        
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:background="@drawable/icon_exit"/>
+		        
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:layout_marginLeft="12dp"
+		            android:text="退出登录"
+		            android:textSize="12sp"
+		            android:textColor="@android:color/white"/>
+		        
+		    </LinearLayout>    
+		    
+		</RelativeLayout>
+					    
+	</RelativeLayout>
+		    
+</RelativeLayout>
